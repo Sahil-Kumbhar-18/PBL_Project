@@ -109,25 +109,12 @@ ul li{
   transition: width 0.5s ease-in-out;
   display: none;
  }
- .res-nav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 300px;
-    z-index: 999;
-    background-color: lightseagreen;
-    z-index: 1;
-    box-shadow: -10px 0px 10px rgba(0, 0,0, 0.1);
-    padding: 30px;
-    padding-top: 100px;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content:flex-start;
-    transition:ease-in-out;
-    z-index: 99;
- }
+ .res-nav {
+    position: fixed;
+    left: -100%;
+    transition: transform 0.3s ease-in-out;
+}
+
  .res-nav .right ul{
     display: flex;
     flex-direction: column;
@@ -272,3 +259,25 @@ ul li{
       margin-top: 0;
     }
  }
+
+ /* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff; 
+}
+
+nav.dark-mode {
+  background-color: #1f1f1f;                  /* Dark nav background */
+}
+
+nav.dark-mode a {
+  color: #ffffff;                             /* Light links */
+}
+
+.search-bar.dark-mode input[type="search"] 
+{
+  background-color: #333;           /* Dark input background */
+  color: #ffffff;                   /* Light input text */
+}
+
+/*Further Styling to add*/
